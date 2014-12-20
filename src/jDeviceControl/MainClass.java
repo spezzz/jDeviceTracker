@@ -80,11 +80,11 @@ public class MainClass
 		}
 		try 
 		{
-			Class.forName("org.sqlite.JDBC");
+			Class.forName("org.sqlite.jdbc");
 			cnnctn = DriverManager.getConnection("jdbc:sqlite:test.db");
 			cnnctn.setAutoCommit(false);	
 			System.out.println("Opened database successfully");
-			stmt = cnnctn.createStatement();
+			stmt = cnnctn.createStatement(); 
 			String sql = "INSERT INTO PG100Config ("
 		               + "Field1,Field2,Field3,Field4,Field5,"
 		               + "Field6,Field7,Field8,Field9,Field10,) "
